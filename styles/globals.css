@@ -1,16 +1,61 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-white;
+    scroll-behavior: smooth;
+  }
+  ::-moz-selection {
+    @apply text-black bg-yellow-200;
+  }
+  ::selection {
+    @apply text-black bg-yellow-200;
+  }
+  h1,
+  .h1 {
+    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
+  }
+  h2,
+  .h2 {
+    @apply text-xl font-semibold md:text-2xl lg:text-3xl;
+  }
+  h3,
+  .h3 {
+    @apply text-lg font-semibold md:text-2xl;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-3 text-sm font-semibold border rounded-md;
+  }
+  .btn--light {
+    @apply bg-gray-100 border-transparent hover:bg-gray-200;
+  }
+  .btn--primary {
+    @apply text-white bg-blue-600 border-transparent hover:bg-blue-700;
+  }
+  .btn--outline {
+    @apply border-gray-200 hover:bg-gray-100;
+  }
+  .btn--lg {
+    @apply px-6 py-3 md:text-base;
+  }
+  .btn--disabled {
+    @apply text-gray-500 cursor-not-allowed;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
 }
