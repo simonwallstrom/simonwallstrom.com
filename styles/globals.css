@@ -30,6 +30,10 @@
 }
 
 @layer components {
+  .site-header {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
   .btn {
     @apply inline-block px-4 py-3 text-sm font-semibold border rounded-md;
   }
