@@ -22,6 +22,7 @@ export default function ChangeLog({ commit }) {
           <a
             className="flex items-center"
             target="_blank"
+            title={commit.title}
             href={commit.pull_request.html_url}
           >
             <div className="clamp-1">{commit.title}</div>
