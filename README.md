@@ -6,6 +6,8 @@ This is my personal site – A place for me to showcase my work, explore ideas a
 
 - [x] Complete initial style guide and design for Start page
 - [x] Fix header background bug on mobile and move it to separate components
+- [x] Add Changelog component
+- [ ] Make yellow text darker to meet contrast rule
 - [ ] Implement sticky footer
 - [ ] Add OG-tags and NEXT SEO
 - [ ] Create "Now playing" component from Spotify API
