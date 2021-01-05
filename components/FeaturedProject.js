@@ -12,7 +12,7 @@ const FeaturedProject = ({
   children,
 }) => {
   const colors = {
-    yellow: 'text-yellow-600',
+    yellow: 'text-yellow-700',
     blue: 'text-blue-600',
     red: 'text-red-600',
     black: 'text-black',

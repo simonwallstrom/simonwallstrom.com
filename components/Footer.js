@@ -10,13 +10,15 @@ export default function Footer() {
       <div className="grid max-w-lg gap-8 mx-auto md:max-w-4xl md:grid-cols-2">
         <div>
           <div className="flex flex-col items-center md:space-x-4 md:flex-row">
-            <Image
-              className="block mb-5 rounded-full md:mb-0"
-              src="/me.jpg"
-              alt="Picture of me!"
-              width="96px"
-              height="96px"
-            />
+            <div className="mb-5 md:mb-0">
+              <Image
+                className="block rounded-full"
+                src="/me.jpg"
+                alt="Picture of me!"
+                width="96px"
+                height="96px"
+              />
+            </div>
             <div className="text-center md:text-left">
               <div className="text-xs tracking-widest text-gray-600 uppercase">
                 Stockholm · Sweden
@@ -48,9 +50,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center md:text-left">
-          <h4 className="text-xs tracking-widest text-gray-600 uppercase">
+          <h3 className="text-xs tracking-widest text-gray-600 uppercase">
             About this site
-          </h4>
+          </h3>
           <p className="mt-2 text-gray-600">
             This site is built using{' '}
             <ExternalLink
