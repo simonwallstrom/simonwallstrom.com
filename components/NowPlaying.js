@@ -1,19 +1,20 @@
 import Image from 'next/image';
+import { Card } from './Card';
 
 export default function NowPlaying() {
   return (
-    <div className="flex flex-col border border-gray-200 rounded-lg shadow-sm">
-      <div className="flex items-center">
-        <div className="flex" style={{ minWidth: '135px' }}>
+    <Card className="flex flex-col bg-white shadow rounded-xl">
+      <div className="flex items-center flex-1">
+        <div className="relative h-full" style={{ minWidth: '110px' }}>
           <Image
             src="/weeknd.jpg"
             alt="Picture of the author"
-            width="135px"
-            height="135px"
+            layout="fill"
+            objectFit="cover"
             className="flex rounded-l-lg"
           />
         </div>
-        <div className="p-5">
+        <div className="p-6 md:p-8">
           <div className="flex items-center">
             <div>
               <svg className="w-4 h-4 mr-2 -mt-px" viewBox="0 0 168 168">
@@ -23,16 +24,16 @@ export default function NowPlaying() {
                 ></path>
               </svg>
             </div>
-            <div className="text-xs font-medium tracking-widest text-green-600 uppercase">
+            <div className="text-sm font-medium tracking-wider text-green-600 uppercase">
               Now playing
             </div>
           </div>
           <div className="mt-1 text-lg font-semibold clamp-1">
-            Blinding Lights
+            Blinding lights
           </div>
           <div className="text-gray-500">The Weeknd</div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

@@ -6,26 +6,31 @@
 
 @layer base {
   html {
-    @apply bg-white;
+    @apply bg-gray-75;
     scroll-behavior: smooth;
   }
+
   ::-moz-selection {
     @apply text-black bg-yellow-200;
   }
+
   ::selection {
     @apply text-black bg-yellow-200;
   }
+
   h1,
   .h1 {
-    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
+    @apply text-3xl font-bold sm:text-4xl;
   }
+
   h2,
   .h2 {
-    @apply text-xl font-semibold md:text-2xl lg:text-3xl;
+    @apply text-2xl font-semibold sm:text-3xl;
   }
+
   h3,
   .h3 {
-    @apply text-lg font-semibold md:text-2xl;
+    @apply text-xl font-semibold sm:text-2xl;
   }
 }
 
@@ -33,22 +38,26 @@
   .site-header {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+    @apply sticky top-0 z-10 w-full px-4 bg-white shadow-sm bg-opacity-80;
+    @apply md:px-8;
   }
+
   .btn {
-    @apply inline-block px-4 py-3 text-sm font-semibold border rounded-md;
+    @apply inline-block px-6 py-3 text-sm font-semibold border border-transparent rounded-md;
   }
-  .btn--light {
-    @apply bg-gray-100 border-transparent hover:bg-gray-200;
-  }
+
   .btn--primary {
-    @apply text-white bg-blue-600 border-transparent hover:bg-blue-700;
+    @apply text-white bg-blue-600 shadow-sm active:bg-blue-600 hover:bg-blue-500 hover:shadow active:shadow-none;
   }
+
   .btn--outline {
-    @apply border-gray-200 hover:bg-gray-100;
+    @apply bg-white border border-gray-200 shadow-sm hover:border-gray-300 hover:shadow active:shadow-none;
   }
+
   .btn--lg {
-    @apply px-6 py-3 md:text-base;
+    @apply md:text-base;
   }
+
   .btn--disabled {
     @apply text-gray-500 cursor-not-allowed;
   }
@@ -59,6 +68,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .smooth-scroll {
     scroll-behavior: smooth;
   }

@@ -1,5 +1,6 @@
 import { GitPullRequest } from 'react-feather';
-import Card from './Card';
+import { Card, CardContent, CardHeader } from './Card';
+import ExternalLink from './ExternalLink';
 
 export default function ChangeLog({ commit }) {
   const mergedAt = new Date(commit.closed_at);
@@ -11,27 +12,24 @@ export default function ChangeLog({ commit }) {
 
   return (
     <Card>
-      <div className="flex items-center text-indigo-600">
-        <GitPullRequest size={16} className="mr-2" />
-        <div className="text-xs font-medium tracking-widest uppercase">
-          Changelog
-        </div>
-      </div>
-      <div className="flex items-center mt-1">
-        <div className="text-lg font-semibold">
-          <a
-            className="flex items-center"
-            target="_blank"
-            title={commit.title}
+      <CardContent>
+        <CardHeader
+          text="Changelog"
+          icon={<GitPullRequest size={18} />}
+          className="text-indigo-600"
+        />
+        <h3 className="mt-2 text-lg leading-tight clamp-2">
+          <ExternalLink
             href={commit.pull_request.html_url}
+            title={commit.title}
           >
-            <div className="clamp-1">{commit.title}</div>
-          </a>
+            {commit.title}
+          </ExternalLink>
+        </h3>
+        <div className="mt-1 text-gray-500">
+          #{commit.number} by {commit.user.login} · {mergedAtFormatted}
         </div>
-      </div>
-      <div className="text-sm text-gray-500">
-        #{commit.number} by {commit.user.login} · {mergedAtFormatted}
-      </div>
+      </CardContent>
     </Card>
   );
 }

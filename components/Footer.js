@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="px-4 py-10 bg-gray-100 md:py-16 lg:py-24 md:px-8"
+      className="px-4 py-10 mt-10 text-center bg-white md:mt-16 lg:mt-24 md:py-16 lg:py-24 md:px-8"
     >
-      <div className="grid max-w-lg gap-8 mx-auto md:max-w-4xl md:grid-cols-2">
+      <div className="grid max-w-lg gap-8 mx-auto md:max-w-2xl md:grid-cols-2">
         <div>
           <div className="flex flex-col items-center md:space-x-4 md:flex-row">
             <div className="mb-5 md:mb-0">
@@ -20,27 +20,27 @@ export default function Footer() {
               />
             </div>
             <div className="text-center md:text-left">
-              <div className="text-xs tracking-widest text-gray-600 uppercase">
+              <div className="text-xs font-semibold tracking-wider text-gray-600 uppercase">
                 Stockholm · Sweden
               </div>
               <div className="mt-1 text-2xl font-semibold">Simon Wallström</div>
               <div className="mt-2 space-x-2 text-sm">
                 <ExternalLink
-                  className="border-b border-current border-dashed"
+                  className="border-b border-current border-dashed hover:border-solid"
                   href="https://github.com/simonwallstrom"
                 >
                   Github
                 </ExternalLink>
                 <span className="font-bold">·</span>
                 <ExternalLink
-                  className="border-b border-current border-dashed"
+                  className="border-b border-current border-dashed hover:border-solid"
                   href="https://twitter.com/simonwallstrom"
                 >
                   Twitter
                 </ExternalLink>
                 <span className="font-bold">·</span>
                 <ExternalLink
-                  className="border-b border-current border-dashed"
+                  className="border-b border-current border-dashed hover:border-solid"
                   href="mailto:simon.wallstrom@gmail.com"
                 >
                   Mail
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center md:text-left">
-          <h3 className="text-xs tracking-widest text-gray-600 uppercase">
+          <h3 className="text-xs tracking-wider text-gray-600 uppercase">
             About this site
           </h3>
           <p className="mt-2 text-gray-600">
