@@ -7,15 +7,14 @@ This is my personal site – A place for me to showcase my work, explore ideas a
 - [x] Complete initial style guide and design for Start page
 - [x] Fix header background bug on mobile and move it to separate components
 - [x] Add Changelog component
-- [ ] Make yellow text darker to meet contrast rule
+- [x] General design improvements and code refactor
+- [ ] Complete Projects page
+- [ ] Add /uses page from Raindrop API
 - [ ] Implement sticky footer
 - [ ] Add OG-tags and NEXT SEO
 - [ ] Create "Now playing" component from Spotify API
-- [ ] Complete Projects page
-- [ ] Pull "Featured projects" data from same source as Project page
 - [ ] Complete Notes page with MDX support
 - [ ] Extract external links and settings to .env files
-- [ ] Pull bookmarks from Notion API
 - [ ] Add support for dark mode
 - [ ] Change `mailto:`-link in footer to "Copy mail"-feature
 

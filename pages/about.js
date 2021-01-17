@@ -1,14 +1,15 @@
 import { Card, CardContent } from '../components/Card';
 import PageHeader from '../components/PageHeader';
 
-Notes.Favicon = '✍️';
+About.Favicon = '🧐';
 
-export default function Notes() {
+export default function About() {
   return (
     <>
       <PageHeader
-        title="Notes"
-        text="My thoughts on design and frontend development."
+        title="About me"
+        text="Product designer at Get&nbsp;a&nbsp;Newsletter and cofounder of
+          Craftmade. Currently living in Stockholm, Sweden."
       />
       <Card>
         <CardContent>

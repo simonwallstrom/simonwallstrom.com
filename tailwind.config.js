@@ -10,33 +10,38 @@ module.exports = {
       base: ['1rem', { lineHeight: '1.5rem' }],
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
-      '2xl': ['1.5rem', { lineHeight: '1.8rem' }],
-      '3xl': ['1.75rem', { lineHeight: '2.15rem' }],
-      '4xl': ['2rem', { lineHeight: '1.1' }],
-      '5xl': ['2.5rem', { lineHeight: '1.1' }],
-    },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: '#000',
-      white: '#fff',
-      gray: colors.trueGray,
-      blue: colors.blue,
-      green: colors.green,
-      red: colors.rose,
-      teal: colors.teal,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
+      '2xl': ['1.5rem', { lineHeight: '1.9rem' }],
+      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+      '4xl': ['2.5rem', { lineHeight: '2.7rem' }],
+      '5xl': ['3rem', { lineHeight: '1' }],
+      '6xl': ['3.75rem', { lineHeight: '1' }],
+      '7xl': ['4.5rem', { lineHeight: '1' }],
+      '8xl': ['6rem', { lineHeight: '1' }],
+      '9xl': ['8rem', { lineHeight: '1' }],
     },
     lineClamp: {
       1: 1,
       2: 2,
       3: 3,
     },
-    extend: {},
+    extend: {
+      colors: {
+        gray: {
+          75: '#f7f7f9',
+        },
+      },
+      boxShadow: {
+        '3xl':
+          '0 0.6px 0.9px rgba(0, 0, 0, 0.06), 0 1.8px 2.5px rgba(0, 0, 0, 0.039), 0 4.2px 6px rgba(0, 0, 0, 0.03), 0 14px 20px rgba(0, 0, 0, 0.021)',
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      boxShadow: ['active'],
+      borderStyle: ['hover'],
+      backgroundColor: ['active'],
+    },
   },
   plugins: [require('tailwindcss-line-clamp')],
 };

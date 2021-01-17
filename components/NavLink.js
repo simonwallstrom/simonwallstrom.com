@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
-import { RoughNotation } from 'react-rough-notation';
 
 export default function NavLink({ children, href }) {
   const router = useRouter();
   const classNames =
-    router.pathname === href ? 'cursor-default' : 'hover:text-gray-700';
+    router.pathname === href
+      ? 'border-blue-600 text-blue-600'
+      : 'hover:text-blue-600';
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -12,15 +13,12 @@ export default function NavLink({ children, href }) {
   };
 
   return (
-    <a href={href} onClick={handleClick} className={classNames}>
-      <RoughNotation
-        type="highlight"
-        color="#FDE68A"
-        animationDuration={400}
-        show={router.pathname === href ? true : false}
-      >
-        {children}
-      </RoughNotation>
+    <a
+      href={href}
+      onClick={handleClick}
+      className={`border-b-2 border-transparent pt-5 py-4 -mt-0.5 ${classNames}`}
+    >
+      {children}
     </a>
   );
 }
