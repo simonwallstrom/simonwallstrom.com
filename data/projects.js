@@ -2,6 +2,7 @@ const projects = [
   {
     featured: 'true',
     category: 'Side project',
+    image: '/kitty.svg',
     title: 'Kitty – Budget app',
     slug: 'kitty',
     link: '',
@@ -12,7 +13,7 @@ const projects = [
   {
     featured: 'false',
     category: 'Day job',
-    image: '/getanewsletter.png',
+    image: '/getanewsletter.svg',
     title: 'Get a Newsletter',
     slug: 'getanewsletter',
     link: 'https://getanewsletter.com',
@@ -23,6 +24,7 @@ const projects = [
   {
     featured: 'false',
     category: 'Night job',
+    image: '/craftmade.svg',
     title: 'Craftmade',
     slug: 'craftmade',
     link: 'https://craftmade.co',
