@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLink from '../components/ExternalLink';
 import { ArrowUpRight, Sun, Moon, Zap, Star } from 'react-feather';
@@ -51,13 +50,8 @@ export default function ProjectCard(props) {
   return (
     <Card>
       {!isFeatured && image ? (
-        <div className="flex">
-          <Image
-            className="rounded-t-lg"
-            src={image}
-            width="1500"
-            height="700"
-          />
+        <div className="flex items-center justify-center rounded-t-lg h-52 sm:h-72 bg-gradient-to-b from-white via-white to-gray-100">
+          <img src={image} />
         </div>
       ) : null}
       <CardContent>
