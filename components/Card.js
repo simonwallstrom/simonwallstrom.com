@@ -2,7 +2,9 @@ const Card = (props) => {
   const { children, className, ...rest } = props;
   return (
     <div
-      className={`bg-white shadow-3xl rounded-lg ${className || ''}`}
+      className={`bg-white dark:bg-gray-950 shadow-3xl rounded-lg ${
+        className || ''
+      }`}
       {...rest}
     >
       {children}

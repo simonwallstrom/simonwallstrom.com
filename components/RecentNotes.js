@@ -27,14 +27,18 @@ const RecentNotes = () => {
         <CardHeader
           text="Recent notes"
           icon={<BookOpen size={18} />}
-          className="text-yellow-700"
+          className="text-yellow-700 dark:text-yellow-400"
         />
-        <div className="divide-y divide-gray-100">
+        <div className="divide-y divide-gray-100 dark:divide-gray-800">
           {posts.map((post) => (
             <div key={post.id} className="py-4 sm:py-6">
-              <div className="text-sm text-gray-600">{post.date}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                {post.date}
+              </div>
               <h3 className="mt-1 leading-tight">{post.title}</h3>
-              <p className="mt-1.5 clamp-3 text-gray-600">{post.text}</p>
+              <p className="mt-1.5 clamp-3 text-gray-600 dark:text-gray-400">
+                {post.text}
+              </p>
             </div>
           ))}
         </div>
