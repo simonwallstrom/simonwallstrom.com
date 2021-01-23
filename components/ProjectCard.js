@@ -2,19 +2,21 @@ import Link from 'next/link';
 import ExternalLink from '../components/ExternalLink';
 import { ArrowUpRight, Sun, Moon, Zap, Star } from 'react-feather';
 import { Card, CardContent, CardHeader } from './Card';
+import useDarkMode from '../hooks/useDarkMode';
 
 export default function ProjectCard(props) {
   const {
-    project: { image, category, title, text, link, linkText },
+    project: { image, imageDark, category, title, text, link, linkText },
   } = props;
 
   const isFeatured = props.isFeatured || false;
+  const isDark = useDarkMode();
 
   const colors = {
-    yellow: 'text-yellow-700',
-    blue: 'text-blue-600',
-    red: 'text-red-600',
-    black: 'text-black',
+    yellow: 'text-yellow-700 dark:text-yellow-400',
+    blue: 'text-blue-600 dark:text-blue-400',
+    red: 'text-red-600 dark:text-red-400',
+    black: 'text-black dark:text-white',
   };
 
   let name;
@@ -50,8 +52,8 @@ export default function ProjectCard(props) {
   return (
     <Card>
       {!isFeatured && image ? (
-        <div className="flex items-center justify-center rounded-t-lg h-52 sm:h-72 bg-gradient-to-b from-white via-white to-gray-100">
-          <img src={image} />
+        <div className="flex items-center justify-center rounded-t-lg h-52 sm:h-72 bg-gradient-to-b from-white dark:from-gray-950 via-white to-gray-100 dark:to-gray-900">
+          <img src={isDark ? imageDark : image} />
         </div>
       ) : null}
       <CardContent>
@@ -61,8 +63,10 @@ export default function ProjectCard(props) {
           className={`${colors[color]}`}
         />
         <h2 className="mt-2">{title}</h2>
-        <div className="mt-3 text-gray-600">{text}</div>
-        <div className="flex flex-col gap-4 mt-4 sm:flex-row sm:mt-6">
+        <div className="mt-2 text-gray-600 sm:mt-3 dark:text-gray-400">
+          {text}
+        </div>
+        <div className="flex flex-col mt-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row sm:mt-6">
           <ExternalLink
             href={link}
             className="flex items-center justify-center pr-5 space-x-2 btn btn--primary"

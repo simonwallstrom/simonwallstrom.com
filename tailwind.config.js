@@ -2,8 +2,19 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js'],
-  darkMode: 'class',
+  darkMode: 'media',
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      indigo: colors.indigo,
+      blue: colors.blue,
+      yellow: colors.yellow,
+      red: colors.rose,
+    },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
@@ -28,6 +39,8 @@ module.exports = {
       colors: {
         gray: {
           75: '#f7f7f9',
+          950: '#151515',
+          1000: '#0A0A0A',
         },
       },
       boxShadow: {
@@ -38,7 +51,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      boxShadow: ['active'],
+      boxShadow: ['active', 'dark'],
       borderStyle: ['hover'],
       backgroundColor: ['active'],
     },

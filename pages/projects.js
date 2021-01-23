@@ -11,7 +11,7 @@ export default function Projects() {
         text="Some of the things i've been working on over the years, both my
           professional work and the odd side project."
       />
-      <div className="space-y-4 sm:space-y-8">
+      <div className="space-y-4 sm:space-y-12">
         <ProjectList />
       </div>
     </>

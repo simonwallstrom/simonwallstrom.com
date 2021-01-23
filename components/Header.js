@@ -9,7 +9,7 @@ export default function Header({ favicon }) {
           <Link href="/">
             <a className="flex items-center">
               <span className="mr-2 text-xl">{favicon}</span>
-              <span>Simon Wallström</span>
+              <span className="dark:text-white">Simon Wallström</span>
             </a>
           </Link>
         </div>

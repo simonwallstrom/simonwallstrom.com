@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="px-4 py-10 mt-10 text-center bg-white md:mt-16 lg:mt-24 md:py-16 lg:py-24 md:px-8"
+      className="px-4 py-10 mt-10 text-center bg-white dark:bg-gray-950 md:mt-16 lg:mt-24 md:py-16 lg:py-24 md:px-8"
     >
       <div className="grid max-w-lg gap-8 mx-auto md:max-w-2xl md:grid-cols-2">
         <div>
@@ -20,7 +20,7 @@ export default function Footer() {
               />
             </div>
             <div className="text-center md:text-left">
-              <div className="text-xs font-semibold tracking-wider text-gray-600 uppercase">
+              <div className="text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400">
                 Stockholm · Sweden
               </div>
               <div className="mt-1 text-2xl font-semibold">Simon Wallström</div>
@@ -50,34 +50,34 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center md:text-left">
-          <h3 className="text-xs tracking-wider text-gray-600 uppercase">
+          <h3 className="text-xs tracking-wider text-gray-600 uppercase dark:text-gray-400">
             About this site
           </h3>
-          <p className="mt-2 text-gray-600">
+          <p className="mt-2 text-gray-600 dark:text-gray-400">
             This site is built using{' '}
             <ExternalLink
-              className="font-medium text-black hover:text-gray-600"
+              className="font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400"
               href="https://nextjs.org/"
             >
               Next.js
             </ExternalLink>
             , styled with{' '}
             <ExternalLink
-              className="font-medium text-black hover:text-gray-600"
+              className="font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400"
               href="https://tailwindcss.com/"
             >
               Tailwind CSS
             </ExternalLink>{' '}
             and hosted on{' '}
             <ExternalLink
-              className="font-medium text-black hover:text-gray-600"
+              className="font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400"
               href="https://vercel.com/"
             >
               Vercel
             </ExternalLink>
             . You can check out the source code on{' '}
             <ExternalLink
-              className="font-medium text-black hover:text-gray-600"
+              className="font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400"
               href="https://github.com/simonwallstrom/simonwallstrom.com"
             >
               Github

@@ -13,7 +13,7 @@ export default function Home({ commit }) {
         text="Product designer at Get&nbsp;a&nbsp;Newsletter and cofounder of
           Craftmade. Currently living in Stockholm, Sweden."
       />
-      <div className="space-y-4 sm:space-y-8">
+      <div className="space-y-4 sm:space-y-12">
         <ProjectList isFeatured={true} />
         <RecentNotes />
         <ChangeLog commit={commit} />

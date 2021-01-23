@@ -13,8 +13,8 @@ export default function Notes() {
       <Card>
         <CardContent>
           <h2>Nothing to see yet...</h2>
-          <div className="mt-3 text-gray-500">
-            <span className="font-medium text-black">
+          <div className="mt-3 text-gray-500 dark:text-gray-400">
+            <span className="font-medium text-black dark:text-white">
               This page is under construction.
             </span>{' '}
             In order to avoid infinite procrastination I decided to ship fast

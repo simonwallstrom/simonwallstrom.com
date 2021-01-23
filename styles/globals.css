@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply bg-gray-75;
+    @apply bg-gray-75 dark:bg-gray-1000 dark:text-white;
     scroll-behavior: smooth;
   }
 
@@ -38,7 +38,7 @@
   .site-header {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    @apply sticky top-0 z-10 w-full px-4 bg-white shadow-sm bg-opacity-80;
+    @apply sticky top-0 z-10 w-full px-4 bg-white shadow-sm dark:bg-gray-950 bg-opacity-80;
     @apply md:px-8;
   }
 
@@ -51,7 +51,7 @@
   }
 
   .btn--outline {
-    @apply bg-white border border-gray-200 shadow-sm hover:border-gray-300 hover:shadow active:shadow-none;
+    @apply bg-white border border-gray-200 shadow-sm hover:border-gray-300 hover:shadow active:shadow-none dark:text-white dark:hover:border-gray-700 dark:border-gray-800 dark:bg-gray-900;
   }
 
   .btn--lg {
