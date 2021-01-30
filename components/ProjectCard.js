@@ -62,7 +62,7 @@ export default function ProjectCard(props) {
         <div className="flex flex-col mt-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row sm:mt-6">
           <CustomLink
             href={link}
-            className="flex items-center justify-center pr-5 space-x-2 btn btn--primary"
+            className="flex items-center justify-center space-x-2 pr-7 btn btn--primary"
           >
             <span>{linkText}</span>
             <ArrowUpRight size="16" className="text-blue-200" />
