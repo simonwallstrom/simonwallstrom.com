@@ -1,20 +1,20 @@
 import { Card, CardContent } from '../components/Card';
 import PageHeader from '../components/PageHeader';
 
-Notes.Favicon = '✍️';
+Bookmarks.Favicon = '📚️';
 
-export default function Notes() {
+export default function Bookmarks() {
   return (
     <>
       <PageHeader
-        title="Notes"
-        text="My thoughts on design and frontend development."
+        title="Bookmarks"
+        text="Design, development and general tech resources I reach for on a regular basis."
       />
       <Card>
         <CardContent>
           <h2>Nothing to see yet...</h2>
-          <div className="mt-3 text-gray-500 dark:text-gray-400">
-            <span className="font-medium text-black dark:text-white">
+          <div className="mt-3">
+            <span className="font-semibold">
               This page is under construction.
             </span>{' '}
             In order to avoid infinite procrastination I decided to ship fast

@@ -14,10 +14,10 @@ export default function Header({ favicon }) {
           </Link>
         </div>
         <nav className="flex items-center justify-center flex-1 space-x-4 sm:space-x-7 sm:justify-end">
-          <NavLink href="/">Dashboard</NavLink>
+          <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
-          <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/notes">Notes</NavLink>
+          <NavLink href="/bookmarks">Bookmarks</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </nav>
       </div>
     </header>

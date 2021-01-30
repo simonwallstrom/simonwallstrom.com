@@ -5,7 +5,7 @@ export default function NavLink({ children, href }) {
   const classNames =
     router.pathname === href
       ? 'border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400'
-      : 'hover:text-blue-600';
+      : 'hover:text-blue-600 dark:hover:text-blue-400';
 
   const handleClick = (e) => {
     e.preventDefault();

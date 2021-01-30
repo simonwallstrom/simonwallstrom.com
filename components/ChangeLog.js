@@ -1,6 +1,6 @@
 import { GitPullRequest } from 'react-feather';
 import { Card, CardContent, CardHeader } from './Card';
-import ExternalLink from './ExternalLink';
+import CustomLink from './CustomLink';
 
 export default function ChangeLog({ commit }) {
   const mergedAt = new Date(commit.closed_at);
@@ -19,12 +19,9 @@ export default function ChangeLog({ commit }) {
           className="text-indigo-600 dark:text-indigo-400"
         />
         <h3 className="mt-2 text-lg leading-tight clamp-2">
-          <ExternalLink
-            href={commit.pull_request.html_url}
-            title={commit.title}
-          >
+          <CustomLink href={commit.pull_request.html_url} title={commit.title}>
             {commit.title}
-          </ExternalLink>
+          </CustomLink>
         </h3>
         <div className="mt-1 text-gray-500 dark:text-gray-400">
           #{commit.number} by {commit.user.login} · {mergedAtFormatted}

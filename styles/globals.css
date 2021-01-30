@@ -6,7 +6,8 @@
 
 @layer base {
   html {
-    @apply bg-gray-75 dark:bg-gray-1000 dark:text-white;
+    @apply bg-gray-75;
+    @apply dark:bg-gray-1000 dark:text-gray-300;
     scroll-behavior: smooth;
   }
 
@@ -21,16 +22,19 @@
   h1,
   .h1 {
     @apply text-3xl font-bold sm:text-4xl;
+    @apply dark:text-white;
   }
 
   h2,
   .h2 {
     @apply text-2xl font-semibold sm:text-3xl;
+    @apply dark:text-white;
   }
 
   h3,
   .h3 {
     @apply text-xl font-semibold sm:text-2xl;
+    @apply dark:text-white;
   }
 }
 
@@ -38,28 +42,16 @@
   .site-header {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    @apply sticky top-0 z-10 w-full px-4 bg-white shadow-sm dark:bg-gray-950 bg-opacity-80;
+    @apply sticky top-0 z-10 w-full px-4 bg-white shadow-sm dark:bg-gray-900 bg-opacity-80;
     @apply md:px-8;
   }
 
   .btn {
-    @apply inline-block px-6 py-3 text-sm font-semibold border border-transparent rounded-md;
+    @apply inline-block px-8 py-3 text-sm font-semibold border border-transparent rounded-md;
   }
 
   .btn--primary {
-    @apply text-white bg-blue-600 shadow-sm active:bg-blue-600 hover:bg-blue-500 hover:shadow active:shadow-none;
-  }
-
-  .btn--outline {
-    @apply bg-white border border-gray-200 shadow-sm hover:border-gray-300 hover:shadow active:shadow-none dark:text-white dark:hover:border-gray-700 dark:border-gray-800 dark:bg-gray-900;
-  }
-
-  .btn--lg {
-    @apply md:text-base;
-  }
-
-  .btn--disabled {
-    @apply text-gray-500 cursor-not-allowed;
+    @apply text-white bg-blue-600 border-0 border-t border-blue-500 shadow-sm active:bg-blue-600 hover:bg-blue-500 hover:shadow active:shadow-none;
   }
 }
 
@@ -67,9 +59,5 @@
   .text-gradient {
     background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  .smooth-scroll {
-    scroll-behavior: smooth;
   }
 }
