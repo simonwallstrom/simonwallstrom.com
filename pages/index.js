@@ -1,7 +1,6 @@
 import PageHeader from '../components/PageHeader';
 import ChangeLog from '../components/ChangeLog';
 import ProjectList from '../components/ProjectList';
-import RecentNotes from '../components/RecentNotes';
 
 Home.Favicon = '👋';
 
@@ -13,9 +12,8 @@ export default function Home({ commit }) {
         text="Product designer at Get&nbsp;a&nbsp;Newsletter and cofounder of
           Craftmade. Currently living in Stockholm, Sweden."
       />
-      <div className="space-y-4 sm:space-y-12">
-        <ProjectList isFeatured={true} />
-        <RecentNotes />
+      <div className="space-y-6 sm:space-y-12">
+        <ProjectList />
         <ChangeLog commit={commit} />
       </div>
     </>

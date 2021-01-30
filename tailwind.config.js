@@ -9,7 +9,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.gray,
+      gray: colors.trueGray,
       indigo: colors.indigo,
       blue: colors.blue,
       yellow: colors.yellow,
@@ -39,7 +39,6 @@ module.exports = {
       colors: {
         gray: {
           75: '#f7f7f9',
-          950: '#151515',
           1000: '#0A0A0A',
         },
       },
@@ -52,7 +51,7 @@ module.exports = {
   variants: {
     extend: {
       boxShadow: ['active', 'dark'],
-      borderStyle: ['hover'],
+      borderStyle: ['hover', 'dark'],
       backgroundColor: ['active'],
     },
   },

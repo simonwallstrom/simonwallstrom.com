@@ -2,7 +2,7 @@ const Card = (props) => {
   const { children, className, ...rest } = props;
   return (
     <div
-      className={`bg-white dark:bg-gray-950 shadow-3xl rounded-lg ${
+      className={`bg-white dark:bg-gray-900 shadow-3xl rounded-lg ${
         className || ''
       }`}
       {...rest}
@@ -24,7 +24,7 @@ const CardHeader = ({ className, icon, text }) => {
   return (
     <div className={`flex items-center ${className}`}>
       <div className="mr-2">{icon}</div>
-      <div className="text-xs font-medium tracking-wider uppercase sm:text-sm">
+      <div className="font-mono text-xs font-medium tracking-wide uppercase sm:text-sm">
         {text}
       </div>
     </div>
