@@ -8,7 +8,6 @@
   html {
     @apply bg-gray-75;
     @apply dark:bg-gray-1000 dark:text-gray-300;
-    scroll-behavior: smooth;
   }
 
   ::-moz-selection {
