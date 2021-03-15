@@ -52,6 +52,18 @@
   .btn--primary {
     @apply text-white bg-blue-600 border-0 border-t border-blue-500 shadow-sm active:bg-blue-600 hover:bg-blue-500 hover:shadow active:shadow-none;
   }
+
+  .copy-email-tooltip {
+    @apply absolute z-10 py-2 text-sm transform -translate-y-1/2 bg-white rounded shadow-md dark:text-white dark:bg-gray-800 w-28 top-1/2 right-1/2;
+  }
+
+  .copy-email-tooltip:after {
+    @apply absolute w-0 h-0 transform -translate-y-1/2 border-white dark:border-gray-800 left-full top-1/2;
+    content: "";
+    border-top: 5px solid transparent;
+    border-left-width: 6px;
+    border-bottom: 5px solid transparent;
+  }
 }
 
 @layer utilities {

@@ -40,10 +40,13 @@ export default function Bookmarks() {
       />
       <Card className="flex overflow-hidden divide-x divide-gray-100 dark:divide-gray-800">
         {bookmarkCollections.map((bookmarkCollection) => (
-          <div key={bookmarkCollection.collectionId} className="flex-1">
+          <div
+            key={bookmarkCollection.collectionId}
+            className="flex-auto sm:flex-1"
+          >
             <button
               onClick={() => setActiveTab(bookmarkCollection.collectionId)}
-              className={`w-full pb-4 pt-5  border-b-2 dark:focus:border-blue-400 focus:border-blue-600 focus:outline-none dark:active:bg-gray-800 active:bg-gray-100 border-transparent  ${
+              className={`w-full pb-4 pt-5 px-2  border-b-2 dark:focus:border-blue-400 focus:border-blue-600 focus:outline-none dark:active:bg-gray-800 active:bg-gray-100 border-transparent  ${
                 activeTab === bookmarkCollection.collectionId
                   ? 'border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 cursor-default'
                   : 'hover:text-blue-600 dark:hover:text-blue-400'
