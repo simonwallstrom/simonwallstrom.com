@@ -1,7 +1,19 @@
 import Image from 'next/image';
+import { useState } from 'react';
 import CustomLink from './CustomLink';
 
 export default function Footer() {
+  const [copyEmail, setCopyEmail] = useState(false);
+  const handleCopyEmail = () => {
+    navigator.clipboard
+      .writeText('simon.wallstrom@gmail.com')
+      .then(function () {
+        setCopyEmail(true);
+        setTimeout(() => {
+          setCopyEmail(false);
+        }, 2500);
+      });
+  };
   return (
     <footer
       id="contact"
@@ -10,7 +22,10 @@ export default function Footer() {
       <div className="grid max-w-lg gap-8 mx-auto md:max-w-2xl md:grid-cols-2">
         <div>
           <div className="flex flex-col items-center md:space-x-4 md:flex-row">
-            <div className="flex mb-5 md:mb-0">
+            <div className="relative flex mb-5 md:mb-0">
+              {copyEmail && (
+                <div className="copy-email-tooltip">Email copied</div>
+              )}
               <Image
                 className="rounded-full"
                 src="/me.jpg"
@@ -41,12 +56,13 @@ export default function Footer() {
                   Twitter
                 </CustomLink>
                 <span className="font-bold">·</span>
-                <CustomLink
-                  className="border-b border-current border-dashed hover:border-solid"
+                <button
+                  onClick={handleCopyEmail}
+                  className="leading-tight border-b border-current border-dashed hover:border-solid"
                   href="mailto:simon.wallstrom@gmail.com"
                 >
-                  Mail
-                </CustomLink>
+                  Copy email
+                </button>
               </div>
             </div>
           </div>

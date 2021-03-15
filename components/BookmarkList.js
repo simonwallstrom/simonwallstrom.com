@@ -36,21 +36,21 @@ export default function BookmarkList({ data, error }) {
         >
           <h3>{bookmark.title}</h3>
           <p className="mt-3">{bookmark.description}</p>
-          <div className="flex mt-3 space-x-6">
-            <span className="flex items-center space-x-2 text-sm font-semibold text-gray-500 group-hover:text-blue-600">
-              <Link size={16} />
-              <span>{bookmark.domain}</span>
-            </span>
+          <div className="flex flex-col mt-3 space-y-1 sm:space-x-6 sm:space-y-0 sm:flex-row">
             <div className="flex items-center space-x-2 text-sm font-semibold text-gray-500">
               <Calendar size={16} />
               <span>
                 {new Intl.DateTimeFormat('en-US', {
-                  month: 'long',
+                  month: 'short',
                   day: 'numeric',
                   year: 'numeric',
                 }).format(new Date(bookmark.created))}
               </span>
             </div>
+            <span className="flex items-center space-x-2 text-sm font-semibold text-gray-500 group-hover:text-blue-600">
+              <Link size={16} />
+              <span>{bookmark.domain}</span>
+            </span>
           </div>
         </CustomLink>
       ))}
