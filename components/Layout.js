@@ -13,7 +13,7 @@ export default function Layout({ children, favicon }) {
         />
       </Head>
       <Header favicon={favicon} />
-      <main className="px-6">
+      <main className="flex-1 px-6">
         <div className="max-w-2xl mx-auto">{children}</div>
       </main>
       <Footer />
