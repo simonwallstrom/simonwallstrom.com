@@ -57,7 +57,13 @@ export default function BudgetList({ handleData, data, type }) {
       {data?.map((type) => (
         <div className="flex items-center" key={type.name}>
           <div className="w-4/12 px-6 py-3">{type.name}</div>
-          <div className="w-4/12 px-6 py-3">{type.category}</div>
+          <div className="flex items-center w-4/12 px-6 py-3 space-x-1.5">
+            <span
+              className={`px-3 bg-gray-100 font-medium dark:bg-gray-800 text-sm py-0.5 rounded-full ${type.category.color}`}
+            >
+              {type.category.name}
+            </span>
+          </div>
           <div className="w-3/12 px-6 py-3">
             <NumberFormat
               value={type.amount}
@@ -96,8 +102,14 @@ export default function BudgetList({ handleData, data, type }) {
                 type={type}
                 category={selectedCategory}
                 handleCategory={setSelectedCategory}
-                name="category"
+                name="category.name"
                 inputRef={register({ required: true })}
+              />
+              <input
+                type="hidden"
+                ref={register}
+                value={selectedCategory?.category?.color || ''}
+                name="category.color"
               />
             </div>
             <div className="w-3/12">
@@ -157,7 +169,7 @@ function Dropdown({ options, name, inputRef, category, handleCategory, type }) {
     >
       <Listbox.Button
         className="w-full px-6 py-3 text-left focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600"
-        value={category?.name}
+        value={category?.category?.name}
         name={name}
         ref={inputRef}
       >
@@ -165,7 +177,7 @@ function Dropdown({ options, name, inputRef, category, handleCategory, type }) {
           {!category ? (
             <span className="text-gray-400">Category...</span>
           ) : (
-            <span>{category.name}</span>
+            <span>{category?.category?.name}</span>
           )}
           <svg
             className="w-5 h-5 mt-px text-gray-400"
@@ -188,7 +200,7 @@ function Dropdown({ options, name, inputRef, category, handleCategory, type }) {
           .map((option) => (
             <Listbox.Option
               className="focus:outline-none"
-              key={option.name}
+              key={option.category.name}
               value={option}
             >
               {({ active }) => (
@@ -197,7 +209,7 @@ function Dropdown({ options, name, inputRef, category, handleCategory, type }) {
                     active ? 'text-white dark:bg-gray-700' : 'text-gray-400'
                   } cursor-pointer focus:outline-none dark:hover:bg-gray-700 px-6 py-2.5`}
                 >
-                  {option.name}
+                  {option.category.name}
                 </div>
               )}
             </Listbox.Option>

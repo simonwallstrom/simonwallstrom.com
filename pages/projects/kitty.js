@@ -3,11 +3,11 @@ import PageHeader from '../../components/PageHeader';
 import BudgetList from '../../components/kitty/BudgetList';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import NumberFormat from 'react-number-format';
-import { initialIncome } from '../../data/kitty';
+import { initialIncome, initialExpenses } from '../../data/kitty';
 
 export default function Kitty() {
   const [incomes, setIncomes] = useLocalStorage('incomes', initialIncome);
-  const [expenses, setExpenses] = useLocalStorage('expenses', []);
+  const [expenses, setExpenses] = useLocalStorage('expenses', initialExpenses);
 
   const totalIncomes = incomes?.reduce((acc, income) => acc + income.amount, 0);
   const totalExpenses = expenses?.reduce(

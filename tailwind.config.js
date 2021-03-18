@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: ['./pages/**/*.js', './components/**/*.js', './data/**/*.js'],
   darkMode: 'media',
   theme: {
     colors: {
@@ -15,6 +15,8 @@ module.exports = {
       green: colors.emerald,
       yellow: colors.yellow,
       red: colors.rose,
+      pink: colors.pink,
+      teal: colors.teal,
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
