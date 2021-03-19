@@ -2,76 +2,51 @@ export const categories = [
   {
     id: 1,
     type: 'income',
-    category: {
-      name: 'Active',
-      color: 'text-green-600 dark:text-green-400',
-    },
+    name: 'Active',
   },
   {
     id: 2,
     type: 'income',
-    category: {
-      name: 'Passive',
-      color: 'text-blue-600 dark:text-blue-400',
-    },
+    name: 'Passive',
   },
   {
     id: 3,
     type: 'expenses',
-    category: {
-      name: 'Housing',
-      color: 'text-yellow-600 dark:text-yellow-400',
-    },
+    name: 'Housing',
   },
   {
     id: 4,
     type: 'expenses',
-    category: {
-      name: 'Transportation',
-      color: 'text-indigo-600 dark:text-indigo-400',
-    },
+    name: 'Transportation',
   },
   {
     id: 5,
     type: 'expenses',
-    category: {
-      name: 'Savings',
-      color: 'text-red-600 dark:text-red-400',
-    },
+    name: 'Savings',
   },
   {
     id: 6,
     type: 'expenses',
-    category: {
-      name: 'Utilities',
-      color: 'text-teal-600 dark:text-teal-400',
-    },
+    name: 'Utilities',
   },
   {
     id: 7,
     type: 'expenses',
-    category: {
-      name: 'Entertainment',
-      color: 'text-pink-600 dark:text-pink-400',
-    },
+    name: 'Entertainment',
   },
 ];
 
 export const initialIncome = [
   {
+    id: 1,
     name: 'Salary',
-    category: {
-      name: 'Active',
-      color: 'text-green-600 dark:text-green-400',
-    },
+    category: 'Active',
     amount: 25000,
   },
   {
+    id: 2,
     name: 'Rent',
-    category: {
-      name: 'Passive',
-      color: 'text-blue-600 dark:text-blue-400',
-    },
+    category: 'Passive',
     amount: 5000,
   },
 ];
@@ -80,37 +55,25 @@ export const initialExpenses = [
   {
     id: 1,
     name: 'Mortgage',
-    category: {
-      name: 'Housing',
-      color: 'text-yellow-600 dark:text-yellow-400',
-    },
+    category: 'Housing',
     amount: 5000,
   },
   {
     id: 2,
     name: 'Subway card',
-    category: {
-      name: 'Transportation',
-      color: 'text-indigo-600 dark:text-indigo-400',
-    },
+    category: 'Transportation',
     amount: 920,
   },
   {
     id: 3,
     name: 'Index funds',
-    category: {
-      name: 'Savings',
-      color: 'text-red-600 dark:text-red-400',
-    },
+    category: 'Savings',
     amount: 2000,
   },
   {
     id: 4,
     name: 'Internet',
-    category: {
-      name: 'Utilities',
-      color: 'text-teal-600 dark:text-teal-400',
-    },
+    category: 'Utilities',
     amount: 399,
   },
 ];

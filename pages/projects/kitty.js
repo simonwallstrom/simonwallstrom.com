@@ -9,6 +9,10 @@ export default function Kitty() {
   const [incomes, setIncomes] = useLocalStorage('incomes', initialIncome);
   const [expenses, setExpenses] = useLocalStorage('expenses', initialExpenses);
 
+  const editRow = () => {
+    console.log('edit');
+  };
+
   const totalIncomes = incomes?.reduce((acc, income) => acc + income.amount, 0);
   const totalExpenses = expenses?.reduce(
     (acc, expenses) => acc + expenses.amount,
@@ -33,6 +37,7 @@ export default function Kitty() {
             type="income"
             data={incomes}
             handleData={(data) => addIncome(data)}
+            handleEdit={editRow}
           />
         </Card>
 
