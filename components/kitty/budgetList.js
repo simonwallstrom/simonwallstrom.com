@@ -1,33 +1,15 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { MoreHorizontal, Plus } from 'react-feather';
-import { useForm } from 'react-hook-form';
 import NumberFormat from 'react-number-format';
-import { categories } from '../../data/kitty';
-import Input from './Input';
-import Dropdown from './Dropdown';
+import Form from './Form';
 
 export default function BudgetList({ handleData, handleEdit, data, type }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { register, handleSubmit } = useForm();
-  const name = useRef(null);
-
-  const [selectedCategory, setSelectedCategory] = useState();
-
-  const onSubmit = (data, e) => {
-    handleData(data);
-    e.target.reset();
-    setSelectedCategory('');
-  };
+  const [isEditing, setIsEditing] = useState(false);
 
   const showAddForm = () => {
     setIsOpen(!isOpen);
   };
-
-  useEffect(() => {
-    if (name.current) {
-      name.current.focus();
-    }
-  }, [isOpen]);
 
   const categoryColor = (category) => {
     let color;
@@ -83,7 +65,7 @@ export default function BudgetList({ handleData, handleEdit, data, type }) {
       </div>
 
       {data?.map((type) => (
-        <div className="flex items-center" key={type.name}>
+        <div className="flex items-center" key={type.id}>
           <div className="w-4/12 px-6 py-3">{type.name}</div>
           <div className="flex items-center w-4/12 px-6 py-3 space-x-1.5">
             <span
@@ -117,47 +99,12 @@ export default function BudgetList({ handleData, handleEdit, data, type }) {
       ))}
 
       {isOpen && (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex items-center">
-            <div className="w-4/12">
-              <Input
-                id="name"
-                inputRef={(e) => {
-                  register(e, { required: true });
-                  name.current = e;
-                }}
-                name="name"
-                placeholder="Name..."
-              />
-            </div>
-            <div className="w-4/12">
-              <Dropdown
-                options={categories}
-                type={type}
-                category={selectedCategory}
-                handleCategory={setSelectedCategory}
-                name="category"
-                inputRef={register({ required: true })}
-              />
-            </div>
-            <div className="w-3/12">
-              <Input
-                type="number"
-                inputRef={register({ valueAsNumber: true, required: true })}
-                name="amount"
-                placeholder="Amount..."
-              />
-            </div>
-            <div className="flex w-1/12">
-              <button
-                className="flex items-center justify-center w-full py-3 font-medium bg-gray-100 hover:text-blue-600 dark:bg-gray-800 dark:hover:text-blue-400 focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600"
-                type="submit"
-              >
-                Add
-              </button>
-            </div>
-          </div>
-        </form>
+        <Form
+          id={data.length}
+          showForm={isOpen}
+          type={type}
+          handleData={handleData}
+        />
       )}
 
       <div className="flex font-semibold rounded-b-lg">

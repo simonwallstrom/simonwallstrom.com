@@ -1,12 +1,37 @@
+import { useState, useRef, useEffect } from 'react';
 import { categories } from '../../data/kitty';
 import Input from './Input';
 import Dropdown from './Dropdown';
+import { useForm } from 'react-hook-form';
 
-const Form = () => {
+const Form = ({ handleData, showForm, type, id }) => {
+  const { register, handleSubmit } = useForm();
+  const name = useRef(null);
+
+  const [selectedCategory, setSelectedCategory] = useState();
+
+  const onSubmit = (data, e) => {
+    handleData(data);
+    e.target.reset();
+    setSelectedCategory('');
+  };
+
+  useEffect(() => {
+    if (name.current) {
+      name.current.focus();
+    }
+  }, [showForm]);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex items-center">
         <div className="w-4/12">
+          <input
+            ref={register({ valueAsNumber: true })}
+            name="id"
+            value={id + 1}
+            type="hidden"
+          />
           <Input
             id="name"
             inputRef={(e) => {
