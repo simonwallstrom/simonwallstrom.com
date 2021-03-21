@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Trash2, X, XCircle } from 'react-feather';
+import { Plus, X } from 'react-feather';
 import NumberFormat from 'react-number-format';
 import Form from './Form';
 
@@ -52,13 +52,13 @@ export default function BudgetList({ handleData, handleDelete, data, type }) {
         </button>
       </div>
       <div className="flex items-center">
-        <div className="w-4/12 px-4 py-3 font-mono text-sm tracking-wide text-left text-gray-500 uppercase sm:px-6">
+        <div className="w-4/12 px-4 py-3 font-mono text-xs tracking-wide text-left text-gray-500 uppercase sm:text-sm sm:px-6">
           Name
         </div>
-        <div className="w-4/12 px-4 py-3 font-mono text-sm tracking-wide text-left text-gray-500 uppercase sm:px-6">
+        <div className="w-4/12 px-4 py-3 font-mono text-xs tracking-wide text-left text-gray-500 uppercase sm:text-sm sm:px-6">
           Category
         </div>
-        <div className="w-3/12 px-4 py-3 font-mono text-sm tracking-wide text-left text-gray-500 uppercase sm:px-6">
+        <div className="w-3/12 px-4 py-3 font-mono text-xs tracking-wide text-left text-gray-500 uppercase sm:text-sm sm:px-6">
           Amount
         </div>
       </div>

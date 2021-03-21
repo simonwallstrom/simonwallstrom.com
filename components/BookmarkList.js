@@ -47,7 +47,7 @@ export default function BookmarkList({ data, error }) {
                 }).format(new Date(bookmark.created))}
               </span>
             </div>
-            <span className="flex items-center space-x-2 text-sm font-semibold text-gray-500 group-hover:text-blue-600">
+            <span className="flex items-center space-x-2 text-sm font-semibold text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400">
               <Link size={16} />
               <span>{bookmark.domain}</span>
             </span>
