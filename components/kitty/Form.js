@@ -24,8 +24,8 @@ const Form = ({ handleData, showForm, type, id }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex items-center">
-        <div className="w-4/12">
+      <div className="flex flex-col items-center divide-y divide-gray-800 sm:divide-y-0 sm:flex-row">
+        <div className="w-full sm:w-4/12">
           <input
             ref={register({ valueAsNumber: true })}
             name="id"
@@ -42,7 +42,7 @@ const Form = ({ handleData, showForm, type, id }) => {
             placeholder="Name..."
           />
         </div>
-        <div className="w-4/12">
+        <div className="w-full sm:w-4/12">
           <Dropdown
             options={categories}
             type={type}
@@ -52,7 +52,7 @@ const Form = ({ handleData, showForm, type, id }) => {
             inputRef={register({ required: true })}
           />
         </div>
-        <div className="w-3/12">
+        <div className="w-full sm:w-3/12">
           <Input
             type="number"
             inputRef={register({ valueAsNumber: true, required: true })}
@@ -60,7 +60,7 @@ const Form = ({ handleData, showForm, type, id }) => {
             placeholder="Amount..."
           />
         </div>
-        <div className="flex w-1/12">
+        <div className="flex w-full sm:w-1/12">
           <button
             className="flex items-center justify-center w-full py-3 font-medium bg-gray-100 hover:text-blue-600 dark:bg-gray-800 dark:hover:text-blue-400 focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600"
             type="submit"

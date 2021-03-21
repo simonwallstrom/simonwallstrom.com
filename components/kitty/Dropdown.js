@@ -16,14 +16,14 @@ export default function Dropdown({
       onChange={handleCategory}
     >
       <Listbox.Button
-        className="w-full px-6 py-3 text-left focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600"
+        className="w-full px-4 py-3 text-left sm:px-6 focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600"
         value={category?.name}
         name={name}
         ref={inputRef}
       >
         <div className="flex items-center justify-between">
           {!category ? (
-            <span className="text-gray-400">Category...</span>
+            <span className="text-gray-400 clamp-1">Category...</span>
           ) : (
             <span>{category?.name}</span>
           )}

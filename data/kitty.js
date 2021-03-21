@@ -41,13 +41,13 @@ export const initialIncome = [
     id: 1,
     name: 'Salary',
     category: 'Active',
-    amount: 25000,
+    amount: 2500,
   },
   {
     id: 2,
-    name: 'Rent',
+    name: 'Side hustle',
     category: 'Passive',
-    amount: 5000,
+    amount: 180,
   },
 ];
 
@@ -56,24 +56,24 @@ export const initialExpenses = [
     id: 1,
     name: 'Mortgage',
     category: 'Housing',
-    amount: 5000,
+    amount: 500,
   },
   {
     id: 2,
     name: 'Subway card',
-    category: 'Transportation',
-    amount: 920,
+    category: 'Transport',
+    amount: 92,
   },
   {
     id: 3,
     name: 'Index funds',
     category: 'Savings',
-    amount: 2000,
+    amount: 200,
   },
   {
     id: 4,
     name: 'Internet',
     category: 'Utilities',
-    amount: 399,
+    amount: 39,
   },
 ];

@@ -9,10 +9,6 @@ export default function Kitty() {
   const [incomes, setIncomes] = useLocalStorage('incomes', initialIncome);
   const [expenses, setExpenses] = useLocalStorage('expenses', initialExpenses);
 
-  const editRow = () => {
-    console.log('edit');
-  };
-
   const totalIncomes = incomes?.reduce((acc, income) => acc + income.amount, 0);
   const totalExpenses = expenses?.reduce(
     (acc, expenses) => acc + expenses.amount,
@@ -22,6 +18,20 @@ export default function Kitty() {
 
   const addIncome = (data) => {
     setIncomes([...incomes, data]);
+  };
+
+  const deleteIncome = (id) => {
+    const remainingIncomes = incomes.filter((income) => id !== income.id);
+    setIncomes(remainingIncomes);
+  };
+
+  const addExpense = (data) => {
+    setExpenses([...expenses, data]);
+  };
+
+  const deleteExpense = (id) => {
+    const remainingExpenses = expenses.filter((expense) => id !== expense.id);
+    setExpenses(remainingExpenses);
   };
 
   return (
@@ -37,23 +47,24 @@ export default function Kitty() {
             type="income"
             data={incomes}
             handleData={(data) => addIncome(data)}
-            handleEdit={editRow}
+            handleDelete={deleteIncome}
           />
         </Card>
 
         <Card>
           <BudgetList
-            handleData={(data) => setExpenses([...expenses, data])}
             type="expenses"
             data={expenses}
+            handleData={(data) => addExpense(data)}
+            handleDelete={deleteExpense}
           />
         </Card>
 
         <Card>
-          <div className="px-6 py-5 border-b-2 border-gray-100 dark:border-gray-800">
+          <div className="px-6 py-5 border-b border-gray-100 dark:border-gray-800">
             <h2 className="text-xl">Summary</h2>
           </div>
-          <div className="flex divide-x divide-gray-100 dark:divide-gray-800">
+          <div className="flex flex-col divide-y divide-gray-100 sm:divide-y-0 sm:divide-x sm:flex-row dark:divide-gray-800">
             <div className="flex-1 p-6">
               <div className="font-mono text-sm tracking-wide text-gray-400 uppercase">
                 Income
@@ -62,8 +73,8 @@ export default function Kitty() {
                 <NumberFormat
                   value={totalIncomes}
                   displayType={'text'}
-                  thousandSeparator={' '}
-                  suffix={':-'}
+                  thousandSeparator={true}
+                  prefix={'€'}
                 />
               </div>
             </div>
@@ -75,8 +86,8 @@ export default function Kitty() {
                 <NumberFormat
                   value={totalExpenses}
                   displayType={'text'}
-                  thousandSeparator={' '}
-                  suffix={':-'}
+                  thousandSeparator={true}
+                  prefix={'€'}
                 />
               </div>
             </div>
@@ -88,8 +99,8 @@ export default function Kitty() {
                 <NumberFormat
                   value={leftToSpend}
                   displayType={'text'}
-                  thousandSeparator={' '}
-                  suffix={':-'}
+                  thousandSeparator={true}
+                  prefix={'€'}
                 />
               </div>
             </div>
