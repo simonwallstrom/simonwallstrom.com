@@ -5,6 +5,8 @@ import { useLocalStorage } from '../../hooks/useLocalStorage';
 import NumberFormat from 'react-number-format';
 import { initialIncome, initialExpenses } from '../../data/budget-app';
 
+BudgetApp.Favicon = '💰️';
+
 export default function BudgetApp() {
   const [incomes, setIncomes] = useLocalStorage('incomes', initialIncome);
   const [expenses, setExpenses] = useLocalStorage('expenses', initialExpenses);

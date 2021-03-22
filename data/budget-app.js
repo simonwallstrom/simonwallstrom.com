@@ -41,7 +41,7 @@ export const initialIncome = [
     id: 1,
     name: 'Salary',
     category: 'Active',
-    amount: 2500,
+    amount: 2000,
   },
   {
     id: 2,
@@ -62,13 +62,7 @@ export const initialExpenses = [
     id: 2,
     name: 'Subway card',
     category: 'Transport',
-    amount: 92,
-  },
-  {
-    id: 3,
-    name: 'Index funds',
-    category: 'Savings',
-    amount: 200,
+    amount: 49,
   },
   {
     id: 4,
