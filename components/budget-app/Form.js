@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { categories } from '../../data/kitty';
+import { categories } from '../../data/budget-app';
 import Input from './Input';
 import Dropdown from './Dropdown';
 import { useForm } from 'react-hook-form';

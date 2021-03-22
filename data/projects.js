@@ -1,10 +1,10 @@
 const projects = [
   {
     category: 'Side project',
-    image: '/kitty.png',
-    title: 'Kitty – Budget app',
-    slug: 'kitty',
-    link: '/projects/kitty',
+    image: '/budget-app.png',
+    title: 'Budget app',
+    slug: 'budget-app',
+    link: '/projects/budget-app',
     linkText: 'Visit app',
     text:
       'A simple budget app I created to expand my knowledge of Javascript and React. Add your income and expenses and get a summary of your personal finances.',

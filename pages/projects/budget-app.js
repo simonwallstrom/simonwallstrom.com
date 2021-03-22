@@ -1,11 +1,11 @@
 import { Card } from '../../components/Card';
 import PageHeader from '../../components/PageHeader';
-import BudgetTable from '../../components/kitty/BudgetTable';
+import BudgetTable from '../../components/budget-app/BudgetTable';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import NumberFormat from 'react-number-format';
-import { initialIncome, initialExpenses } from '../../data/kitty';
+import { initialIncome, initialExpenses } from '../../data/budget-app';
 
-export default function Kitty() {
+export default function BudgetApp() {
   const [incomes, setIncomes] = useLocalStorage('incomes', initialIncome);
   const [expenses, setExpenses] = useLocalStorage('expenses', initialExpenses);
 
@@ -37,7 +37,7 @@ export default function Kitty() {
   return (
     <>
       <PageHeader
-        title="Kitty"
+        title="Budget app"
         text="Add your income and expenses and get a summary of your monthly personal finances."
       />
 
