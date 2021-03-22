@@ -13,8 +13,8 @@ export default function Layout({ children, favicon }) {
         />
       </Head>
       <Header favicon={favicon} />
-      <main className="flex-1 px-6">
-        <div className="max-w-2xl mx-auto">{children}</div>
+      <main className="flex flex-1 px-6">
+        <div className="flex flex-col w-full max-w-2xl mx-auto">{children}</div>
       </main>
       <Footer />
     </>

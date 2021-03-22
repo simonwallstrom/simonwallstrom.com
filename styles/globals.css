@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  @apply flex flex-col min-h-screen;
+}
+
 @layer base {
   html {
     @apply bg-gray-75;
@@ -16,10 +20,6 @@
 
   ::selection {
     @apply text-black bg-yellow-200;
-  }
-
-  #__next {
-    @apply flex flex-col min-h-screen;
   }
 
   h1,
