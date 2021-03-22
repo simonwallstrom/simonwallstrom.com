@@ -3,7 +3,7 @@ import { Plus, X } from 'react-feather';
 import NumberFormat from 'react-number-format';
 import Form from './Form';
 
-export default function BudgetList({ handleData, handleDelete, data, type }) {
+export default function BudgetTable({ handleData, handleDelete, data, type }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const showAddForm = () => {
@@ -12,6 +12,7 @@ export default function BudgetList({ handleData, handleDelete, data, type }) {
 
   const categoryColor = (category) => {
     let color;
+
     switch (category) {
       case 'Active':
         color = 'text-teal-600 dark:text-teal-400';

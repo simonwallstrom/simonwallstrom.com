@@ -1,6 +1,6 @@
 import { Card } from '../../components/Card';
 import PageHeader from '../../components/PageHeader';
-import BudgetList from '../../components/kitty/BudgetList';
+import BudgetTable from '../../components/kitty/BudgetTable';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import NumberFormat from 'react-number-format';
 import { initialIncome, initialExpenses } from '../../data/kitty';
@@ -43,7 +43,7 @@ export default function Kitty() {
 
       <div className="space-y-6 sm:space-y-12">
         <Card>
-          <BudgetList
+          <BudgetTable
             type="income"
             data={incomes}
             handleData={(data) => addIncome(data)}
@@ -52,7 +52,7 @@ export default function Kitty() {
         </Card>
 
         <Card>
-          <BudgetList
+          <BudgetTable
             type="expenses"
             data={expenses}
             handleData={(data) => addExpense(data)}
