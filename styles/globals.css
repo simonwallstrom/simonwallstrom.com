@@ -18,21 +18,25 @@
     @apply text-black bg-yellow-200;
   }
 
+  #__next {
+    @apply flex flex-col min-h-screen;
+  }
+
   h1,
   .h1 {
-    @apply text-3xl font-bold sm:text-4xl;
+    @apply text-3xl font-extrabold sm:text-4xl;
     @apply dark:text-white;
   }
 
   h2,
   .h2 {
-    @apply text-2xl font-semibold sm:text-3xl;
+    @apply text-2xl font-bold sm:text-3xl;
     @apply dark:text-white;
   }
 
   h3,
   .h3 {
-    @apply text-xl font-semibold sm:text-2xl;
+    @apply text-xl font-bold sm:text-2xl;
     @apply dark:text-white;
   }
 }
@@ -59,7 +63,7 @@
 
   .copy-email-tooltip:after {
     @apply absolute w-0 h-0 transform -translate-y-1/2 border-white dark:border-gray-800 left-full top-1/2;
-    content: "";
+    content: '';
     border-top: 5px solid transparent;
     border-left-width: 6px;
     border-bottom: 5px solid transparent;

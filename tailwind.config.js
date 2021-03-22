@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: ['./pages/**/*.js', './components/**/*.js', './data/**/*.js'],
   darkMode: 'media',
   theme: {
     colors: {
@@ -12,8 +12,11 @@ module.exports = {
       gray: colors.trueGray,
       indigo: colors.indigo,
       blue: colors.blue,
+      green: colors.emerald,
       yellow: colors.yellow,
       red: colors.rose,
+      pink: colors.pink,
+      teal: colors.teal,
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -53,6 +56,7 @@ module.exports = {
       boxShadow: ['active', 'dark'],
       borderStyle: ['hover', 'dark'],
       backgroundColor: ['active'],
+      position: ['focus'],
     },
   },
   plugins: [require('tailwindcss-line-clamp')],

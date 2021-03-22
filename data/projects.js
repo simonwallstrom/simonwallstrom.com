@@ -1,13 +1,13 @@
 const projects = [
   {
     category: 'Side project',
-    image: '/kitty.png',
-    title: 'Kitty – Budget app',
-    slug: 'kitty',
-    link: '/kitty',
-    linkText: 'Coming soon',
+    image: '/budget-app.png',
+    title: 'Budget app',
+    slug: 'budget-app',
+    link: '/projects/budget-app',
+    linkText: 'Visit app',
     text:
-      'A budget app I created to expand my knowledge of Javascript and React. Add your incomes and expenses and get a summary of your personal finances. Built with Next.js and Tailwind – Deployed and hosted with Vercel.',
+      'A simple budget app I created to expand my knowledge of Javascript and React. Add your income and expenses and get a summary of your personal finances.',
   },
   {
     category: 'Day job',
