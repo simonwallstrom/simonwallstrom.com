@@ -68,7 +68,7 @@ export default function BudgetApp() {
           </div>
           <div className="flex flex-col divide-y divide-gray-100 sm:divide-y-0 sm:divide-x sm:flex-row dark:divide-gray-800">
             <div className="flex-1 p-4 sm:px-6 sm:py-5">
-              <div className="font-mono text-xs tracking-wide text-gray-400 uppercase sm:text-sm">
+              <div className="font-mono text-xs tracking-wide text-gray-500 uppercase sm:text-sm">
                 Income
               </div>
               <div className="mt-1 text-2xl font-bold text-blue-600 sm:text-3xl dark:text-blue-400">
@@ -81,7 +81,7 @@ export default function BudgetApp() {
               </div>
             </div>
             <div className="flex-1 p-4 sm:px-6 sm:py-5">
-              <div className="font-mono text-xs tracking-wide text-gray-400 uppercase sm:text-sm">
+              <div className="font-mono text-xs tracking-wide text-gray-500 uppercase sm:text-sm">
                 Expenses
               </div>
               <div className="mt-1 text-2xl font-bold text-yellow-600 sm:text-3xl dark:text-yellow-400">
@@ -94,7 +94,7 @@ export default function BudgetApp() {
               </div>
             </div>
             <div className="flex-1 p-4 sm:px-6 sm:py-5">
-              <div className="font-mono text-xs tracking-wide text-gray-400 uppercase sm:text-sm">
+              <div className="font-mono text-xs tracking-wide text-gray-500 uppercase sm:text-sm">
                 Left to spend
               </div>
               <div className="mt-1 text-2xl font-bold text-green-600 sm:text-3xl dark:text-green-400">
