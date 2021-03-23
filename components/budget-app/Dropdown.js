@@ -42,7 +42,7 @@ export default function Dropdown({
           </svg>
         </div>
       </Listbox.Button>
-      <Listbox.Options className="absolute w-full mt-1 bg-gray-800 border border-gray-700 divide-y divide-gray-100 rounded-md shadow-lg focus:outline-none dark:divide-gray-700">
+      <Listbox.Options className="absolute w-full mt-1 bg-white border border-gray-100 divide-y divide-gray-100 rounded-md shadow-lg dark:bg-gray-800 dark:border-gray-700 focus:outline-none dark:divide-gray-700">
         {options
           .filter((option) => option.type == type)
           .map((option) => (
@@ -54,8 +54,10 @@ export default function Dropdown({
               {({ active }) => (
                 <div
                   className={`${
-                    active ? 'text-white dark:bg-gray-700' : 'text-gray-400'
-                  } cursor-pointer focus:outline-none dark:hover:bg-gray-700 px-6 py-2.5`}
+                    active
+                      ? 'dark:text-white text-black bg-gray-100 dark:bg-gray-700'
+                      : 'text-gray-500 dark:text-gray-400'
+                  } cursor-pointer focus:outline-none px-6 py-2.5`}
                 >
                   {option.name}
                 </div>
