@@ -47,6 +47,7 @@ export default function ProjectCard(props) {
           className="rounded-t-lg"
           src={image}
           alt={title}
+          placeholder="blur"
           quality={100}
           width="1000px"
           height="500px"
