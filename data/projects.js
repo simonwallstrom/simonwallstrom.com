@@ -1,8 +1,18 @@
+import cookbaseImage from '../public/cookbase.png';
 import budgetImage from '../public/budget-app.png';
 import ganImage from '../public/getanewsletter.png';
 import craftmadeImage from '../public/craftmade.png';
 
 const projects = [
+  {
+    category: 'Side project',
+    image: cookbaseImage,
+    title: 'Cookbase',
+    slug: 'cookbase',
+    link: 'https://cookbase.vercel.app/',
+    linkText: 'Visit app',
+    text: 'Meet Cookbase – The simple way to collect and organize your favourite recipes. I have searched high and low for a decent recipe manager, but all of the current options do way too much. This is my attempt to make a simpler version. Bear in mind – It is still work in progress...',
+  },
   {
     category: 'Side project',
     image: budgetImage,
