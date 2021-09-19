@@ -11,7 +11,7 @@
     "@headlessui/react": "^1.4.1",
     "react-hook-form": "^6.15.8",
     "react-number-format": "^4.7.3",
-    "autoprefixer": "^10.3.3",
+    "autoprefixer": "^10.3.4",
     "next": "^11.1.2",
     "postcss": "^8.3.6",
     "react": "17.0.2",
