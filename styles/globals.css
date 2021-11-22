@@ -11,7 +11,7 @@
 @layer base {
   html {
     @apply bg-gray-75;
-    @apply dark:bg-gray-1000 dark:text-gray-300;
+    @apply dark:bg-gray-900 dark:text-gray-300;
   }
 
   ::-moz-selection {
@@ -45,7 +45,7 @@
   .site-header {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    @apply sticky top-0 z-10 w-full px-6 bg-white shadow-sm dark:bg-gray-900 bg-opacity-80;
+    @apply sticky top-0 z-10 w-full px-6 bg-white shadow-sm dark:bg-gray-800 dark:border-b dark:border-gray-700 dark:bg-opacity-80 bg-opacity-80;
     @apply md:px-8;
   }
 
@@ -67,6 +67,10 @@
     border-top: 5px solid transparent;
     border-left-width: 6px;
     border-bottom: 5px solid transparent;
+  }
+
+  .custom-todo-box > input:focus + .custom-todo-box--submit-info {
+    @apply visible;
   }
 }
 

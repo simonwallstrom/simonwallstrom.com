@@ -1,24 +1,24 @@
 const Card = (props) => {
-  const { children, className, ...rest } = props;
+  const { children, className, ...rest } = props
   return (
     <div
-      className={`bg-white dark:bg-gray-900 shadow-3xl rounded-lg ${
+      className={`bg-white dark:bg-gray-800 shadow-3xl dark:shadow-none rounded-lg ${
         className || ''
       }`}
       {...rest}
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
 const CardContent = ({ children, padding = 'md' }) => {
   const styles = {
     sm: 'p-6 md:p-8',
     md: 'p-6 sm:px-12 sm:py-10',
-  };
-  return <div className={`${styles[padding]}`}>{children}</div>;
-};
+  }
+  return <div className={`${styles[padding]}`}>{children}</div>
+}
 
 const CardHeader = ({ className, icon, text }) => {
   return (
@@ -28,7 +28,7 @@ const CardHeader = ({ className, icon, text }) => {
         {text}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export { Card, CardContent, CardHeader };
+export { Card, CardContent, CardHeader }

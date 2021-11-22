@@ -1,23 +1,23 @@
-import Image from 'next/image';
-import { useState } from 'react';
-import CustomLink from './CustomLink';
+import Image from 'next/image'
+import { useState } from 'react'
+import CustomLink from './CustomLink'
 
 export default function Footer() {
-  const [copyEmail, setCopyEmail] = useState(false);
+  const [copyEmail, setCopyEmail] = useState(false)
   const handleCopyEmail = () => {
     navigator.clipboard
       .writeText('simon.wallstrom@gmail.com')
       .then(function () {
-        setCopyEmail(true);
+        setCopyEmail(true)
         setTimeout(() => {
-          setCopyEmail(false);
-        }, 2500);
-      });
-  };
+          setCopyEmail(false)
+        }, 2500)
+      })
+  }
   return (
     <footer
       id="contact"
-      className="px-4 py-10 mt-10 text-center bg-white dark:bg-gray-900 md:mt-16 lg:mt-24 md:py-16 lg:py-24 md:px-8"
+      className="px-4 py-10 mt-10 text-center bg-white dark:bg-gray-800 dark:border-t dark:border-gray-700 md:mt-16 lg:mt-24 md:py-16 lg:py-24 md:px-8"
     >
       <div className="grid max-w-lg gap-8 mx-auto md:max-w-2xl md:grid-cols-2">
         <div>
@@ -105,5 +105,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

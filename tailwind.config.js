@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './data/**/*.js'],
@@ -60,5 +60,5 @@ module.exports = {
       position: ['focus'],
     },
   },
-  plugins: [require('tailwindcss-line-clamp')],
-};
+  plugins: [require('tailwindcss-line-clamp'), require('@tailwindcss/forms')],
+}
