@@ -83,7 +83,7 @@ export default function TodoApp() {
             <div className="px-4 flex justify-between items-center py-4 sm:px-6">
               <h2 className="text-base font-medium flex items-center text-gray-400 space-x-3">
                 <ChevronDown size={16} />
-                <span>Today</span>
+                <span>Todays</span>
               </h2>
               <span className="text-sm text-gray-400">{todosNow.length}</span>
             </div>
