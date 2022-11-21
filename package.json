@@ -10,7 +10,7 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "react-hook-form": "^6.15.8",
-    "react-number-format": "^4.9.1",
+    "react-number-format": "^5.1.2",
     "autoprefixer": "^10.4.4",
     "next": "^12.1.2",
     "postcss": "^8.4.12",
