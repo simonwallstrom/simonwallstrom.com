@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.5.0",
+    "@headlessui/react": "^1.7.10",
     "react-hook-form": "^6.15.8",
     "react-number-format": "^4.9.1",
     "autoprefixer": "^10.4.4",
