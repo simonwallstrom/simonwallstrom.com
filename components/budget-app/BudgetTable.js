@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Plus, X } from 'react-feather';
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from 'react-number-format';
 import Form from './Form';
 
 export default function BudgetTable({ handleData, handleDelete, data, type }) {
@@ -79,7 +79,7 @@ export default function BudgetTable({ handleData, handleDelete, data, type }) {
             </span>
           </div>
           <div className="w-3/12 px-4 py-3 sm:px-6">
-            <NumberFormat
+            <NumericFormat
               value={type.amount}
               displayType={'text'}
               thousandSeparator={true}
@@ -112,7 +112,7 @@ export default function BudgetTable({ handleData, handleDelete, data, type }) {
       <div className="flex font-semibold rounded-b-lg">
         <div className="w-8/12 px-4 py-4 sm:px-6">Total {type}</div>
         <div className="w-4/12 px-4 py-4 sm:px-6">
-          <NumberFormat
+          <NumericFormat
             value={data?.reduce((acc, type) => acc + type.amount, 0)}
             displayType={'text'}
             thousandSeparator={true}

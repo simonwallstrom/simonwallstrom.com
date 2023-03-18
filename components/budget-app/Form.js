@@ -2,43 +2,45 @@ import { useState, useRef, useEffect } from 'react';
 import { categories } from '../../data/budget-app';
 import Input from './Input';
 import Dropdown from './Dropdown';
-import { useForm } from 'react-hook-form';
 
 const Form = ({ handleData, showForm, type, id }) => {
-  const { register, handleSubmit } = useForm();
-  const name = useRef(null);
+  const nameRef = useRef(null);
 
-  const [selectedCategory, setSelectedCategory] = useState();
+  const [name, setName] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState({});
+  const [amount, setAmount] = useState(0);
 
-  const onSubmit = (data, e) => {
-    handleData(data);
-    e.target.reset();
-    setSelectedCategory('');
-  };
+  function handleSubmit(event) {
+    event.preventDefault();
+    handleData({
+      name: name,
+      id: id + 1,
+      amount: Number(amount),
+      category: selectedCategory?.name,
+    });
+    setName('');
+    setSelectedCategory({});
+    setAmount(0);
+    nameRef.current.focus();
+  }
 
   useEffect(() => {
-    if (name.current) {
-      name.current.focus();
+    if (nameRef.current) {
+      nameRef.current.focus();
     }
   }, [showForm]);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit}>
       <div className="flex flex-col items-center divide-y divide-gray-800 sm:divide-y-0 sm:flex-row">
         <div className="w-full sm:w-4/12">
-          <input
-            ref={register({ valueAsNumber: true })}
-            name="id"
-            value={id + 1}
-            type="hidden"
-          />
           <Input
             id="name"
-            inputRef={(e) => {
-              register(e, { required: true });
-              name.current = e;
-            }}
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            required
             name="name"
+            ref={nameRef}
             placeholder="Name..."
           />
         </div>
@@ -48,15 +50,15 @@ const Form = ({ handleData, showForm, type, id }) => {
             type={type}
             category={selectedCategory}
             handleCategory={setSelectedCategory}
-            name="category"
-            inputRef={register({ required: true })}
           />
         </div>
         <div className="w-full sm:w-3/12">
           <Input
             type="number"
-            inputRef={register({ valueAsNumber: true, required: true })}
             name="amount"
+            required
+            onChange={(e) => setAmount(e.target.value)}
+            value={amount}
             placeholder="Amount..."
           />
         </div>

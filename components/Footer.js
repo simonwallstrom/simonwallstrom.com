@@ -30,8 +30,8 @@ export default function Footer() {
                 className="rounded-full"
                 src="/me.jpg"
                 alt="Picture of me!"
-                width="96px"
-                height="96px"
+                width={96}
+                height={96}
               />
             </div>
             <div className="text-center md:text-left">

@@ -2,7 +2,7 @@ import { Card } from '../../components/Card';
 import PageHeader from '../../components/PageHeader';
 import BudgetTable from '../../components/budget-app/BudgetTable';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from 'react-number-format';
 import { initialIncome, initialExpenses } from '../../data/budget-app';
 
 BudgetApp.Favicon = '💰️';
@@ -72,7 +72,7 @@ export default function BudgetApp() {
                 Income
               </div>
               <div className="mt-1 text-2xl font-bold text-blue-600 sm:text-3xl dark:text-blue-400">
-                <NumberFormat
+                <NumericFormat
                   value={totalIncomes}
                   displayType={'text'}
                   thousandSeparator={true}
@@ -85,7 +85,7 @@ export default function BudgetApp() {
                 Expenses
               </div>
               <div className="mt-1 text-2xl font-bold text-yellow-600 sm:text-3xl dark:text-yellow-400">
-                <NumberFormat
+                <NumericFormat
                   value={totalExpenses}
                   displayType={'text'}
                   thousandSeparator={true}
@@ -98,7 +98,7 @@ export default function BudgetApp() {
                 Left to spend
               </div>
               <div className="mt-1 text-2xl font-bold text-green-600 sm:text-3xl dark:text-green-400">
-                <NumberFormat
+                <NumericFormat
                   value={leftToSpend}
                   displayType={'text'}
                   thousandSeparator={true}

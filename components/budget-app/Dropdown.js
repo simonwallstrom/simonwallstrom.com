@@ -1,13 +1,6 @@
 import { Listbox } from '@headlessui/react';
 
-export default function Dropdown({
-  options,
-  name,
-  inputRef,
-  category,
-  handleCategory,
-  type,
-}) {
+export default function Dropdown({ options, category, handleCategory, type }) {
   return (
     <Listbox
       as="div"
@@ -15,14 +8,9 @@ export default function Dropdown({
       value={category}
       onChange={handleCategory}
     >
-      <Listbox.Button
-        className="w-full px-4 py-3 text-left sm:px-6 focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600"
-        value={category?.name}
-        name={name}
-        ref={inputRef}
-      >
+      <Listbox.Button className="w-full px-4 py-3 text-left sm:px-6 focus:outline-none focus:relative focus:ring-1 focus:ring-blue-600">
         <div className="flex items-center justify-between">
-          {!category ? (
+          {!category?.name ? (
             <span className="text-gray-400 clamp-1">Category...</span>
           ) : (
             <span>{category?.name}</span>
