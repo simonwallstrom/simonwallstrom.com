@@ -5,11 +5,7 @@ const CustomLink = (props) => {
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
 
   if (isInternalLink) {
-    return (
-      <Link href={href}>
-        <a className={className} {...props} />
-      </Link>
-    );
+    return <Link className={className} {...props} href={href}></Link>;
   }
 
   return (
